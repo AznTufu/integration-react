@@ -3,10 +3,8 @@ import { LeftSide, Main, RightSide, NavBar } from "./components";
 
 const App = () => (
   <div className='test'>
-    <h1>Hello world</h1>
-
     <div>
-      <NavBar />
+      {/* <NavBar /> */}
       <LeftSide />
       <Main />
       <RightSide />

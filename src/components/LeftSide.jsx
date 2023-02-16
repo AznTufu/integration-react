@@ -4,9 +4,9 @@ import { logo, dashboardimg, logout } from '../assets/'
 
 const LeftSide = () => {
   return (
-    <div>
-      <img src={logo} alt="logo" />
-      <div>
+    <div className='left-section'>
+      <div className='logo'> <img src={logo} alt="logo" /> </div>
+      <div className='dashboard'>
         <img src={dashboardimg} alt="dashboard logo"/> 
         <p>Dashboard</p>
       </div>

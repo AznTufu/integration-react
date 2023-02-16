@@ -13,14 +13,15 @@ import help from "./help.svg";
 import dashboardimg from "./dashboardimg.svg";
 import settings from "./settings.svg";
 import logout from "./logout.svg";
-import line1 from "./line1.svg";
-import line2 from "./line2.svg";
+import curve1 from "./curve1.svg";
+import curve2 from "./curve2.svg";
 import messages from "./messages.svg";
 import products from "./products.svg";
 import clients from "./clients.svg";
 import invoices from "./invoices.svg";
 import notification from "./notification.svg";
 import profile from "./profile.svg";
+import search from "./search.svg";
 
 export {
     bitcoin,
@@ -38,12 +39,13 @@ export {
     dashboardimg,
     settings,
     logout,
-    line1,
-    line2,
+    curve1,
+    curve2,
     messages,
     products,
     clients,
     invoices,
     notification,
     profile,
+    search,
 }

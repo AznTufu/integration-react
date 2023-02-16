@@ -1,25 +1,39 @@
-import { dashboardimg, clients, products, messages, settings, help, usdt, bnb, litecoin, bitcoin, etherum, bitcoin2 } from "../assets";
-export const balance = [
-    {
-      id: "portfolio",
-      title: "Portfolio",
+import {
+    dashboardimg,
+    clients,
+    products,
+    messages,
+    settings,
+    help,
+    usdt,
+    bnb,
+    litecoin,
+    bitcoin,
+    etherum,
+    bitcoin2,
+    curve1,
+    curve2,
+} from "../assets";
+
+export const balances = [{
+        id: "portfolio",
+        title: "Portfolio",
     },
     {
-      id: "funding",
-      title: "Funding",
+        id: "funding",
+        title: "Funding",
     },
     {
-      id: "assets",
-      title: "Assets",
+        id: "assets",
+        title: "Assets",
     },
     {
-      id: "p2p",
-      title: "P2P",
+        id: "p2p",
+        title: "P2P",
     },
-  ];
-  
-export const dashboard = [
-    {
+];
+
+export const dashboard = [{
         id: "dashboard-1",
         title: "Invoices",
         img: dashboardimg,
@@ -47,74 +61,90 @@ export const dashboard = [
     {
         id: "dashboard-6",
         title: "Help",
-        img:  help,
+        img: help,
     },
 ];
 
-export const transactions = [
-  {
-    id: "usdt",
-    icon: usdt,
-    title: "Usdt",
-    stat:"+ 3.546",
-    date : "Today, 1:45 pm",
-    content:
-      "Recieved",
-    
-  },
-  {
-    id: "bnb",
-    icon: bnb,
-    title: "BNB",
-    stat:"+ 0.7546",
-    date : "Today, 10:02 am",
-    content:
-      "Buy",
-  },
-  {
-    id: "lite-coin",
-    icon: litecoin,
-    title: "Lite Coin",
-    stat:"+ 0.7546",
-    date : "Today, 8:55 am",
-    content:
-      "Withdrawal",
-  },
-  {
-    id: "bitcoin-1",
-    icon: bitcoin,
-    title: "Bitcoin",
-    stat:"+ 2.7546",
-    date : "Today, 7:55 am",
-    content:
-      "Recieved",
-  },
-  {
-    id: "etherum-1",
-    icon: etherum,
-    title: "Etherum",
-    stat:"+ 1.646",
-    date : "Today, 5:45 am",
-    content:
-      "Recieved",
-  },
+export const transactions = [{
+        id: "usdt",
+        icon: usdt,
+        title: "Usdt",
+        stat: "+ 3.546",
+        date: "Today, 1:45 pm",
+        content: "Recieved",
+    },
+    {
+        id: "bnb",
+        icon: bnb,
+        title: "BNB",
+        stat: "+ 0.7546",
+        date: "Today, 10:02 am",
+        content: "Buy",
+    },
+    {
+        id: "lite-coin",
+        icon: litecoin,
+        title: "Lite Coin",
+        stat: "+ 0.7546",
+        date: "Today, 8:55 am",
+        content: "Withdrawal",
+    },
+    {
+        id: "bitcoin-1",
+        icon: bitcoin,
+        title: "Bitcoin",
+        stat: "+ 2.7546",
+        date: "Today, 7:55 am",
+        content: "Recieved",
+    },
+    {
+        id: "etherum-1",
+        icon: etherum,
+        title: "Etherum",
+        stat: "+ 1.646",
+        date: "Today, 5:45 am",
+        content: "Recieved",
+    },
 ];
 
-export const assets = [
-  {
-    id: "bitcoin",
-    icon: bitcoin2,
-    title: "Bitcoin",
-    wallet:"121,6450.45",
-    content:
-      "BTC",
-  },
-  {
-    id: "etherum",
-    icon: etherum,
-    title: "Etherum",
-    wallet:"143,850.45",
-    content:
-      "ETH",
-  },
+export const assets = [{
+        id: "bitcoin",
+        icon: bitcoin2,
+        title: "Bitcoin",
+        wallet: "121,6450.45",
+        content: "BTC",
+    },
+    {
+        id: "etherum",
+        icon: etherum,
+        title: "Etherum",
+        wallet: "143,850.45",
+        content: "ETH",
+    },
+];
+
+export const stats = [{
+        id: "bitcoin",
+        icon: bitcoin2,
+        title: "Bitcoin",
+        name: "Market Cap",
+        wallet: "$40,243.70",
+        content: "BTC",
+        timer: "24h change",
+        coefficient: "+ 1.56",
+        img: curve1,
+        trade: "Trade"
+    },
+    {
+        id: "etherum",
+        icon: etherum,
+        title: "Etherum",
+        name: "Market Cap",
+        wallet: "$40,243.70",
+        content: "ETH",
+        timer: "24h change",
+        coefficient: "+ 1.56",
+        img: curve2,
+        trade: "Trade"
+    },
 ];
