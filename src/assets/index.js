@@ -22,6 +22,8 @@ import invoices from "./invoices.svg";
 import notification from "./notification.svg";
 import profile from "./profile.svg";
 import search from "./search.svg";
+import dashboardimgwhite from "./dashboardimgwhite.svg";
+import bitcoin3 from "./bitcoin3.svg";
 
 export {
     bitcoin,
@@ -48,4 +50,6 @@ export {
     notification,
     profile,
     search,
+    dashboardimgwhite,
+    bitcoin3,
 }

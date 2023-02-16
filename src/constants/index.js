@@ -1,5 +1,5 @@
 import {
-    dashboardimg,
+    dashboardimgwhite,
     clients,
     products,
     messages,
@@ -13,6 +13,7 @@ import {
     bitcoin2,
     curve1,
     curve2,
+    bitcoin3,
 } from "../assets";
 
 export const balances = [{
@@ -36,7 +37,7 @@ export const balances = [{
 export const dashboard = [{
         id: "dashboard-1",
         title: "Invoices",
-        img: dashboardimg,
+        img: dashboardimgwhite,
     },
     {
         id: "dashboard-2",
@@ -125,7 +126,7 @@ export const assets = [{
 
 export const stats = [{
         id: "bitcoin",
-        icon: bitcoin2,
+        icon: bitcoin3,
         title: "Bitcoin",
         name: "Market Cap",
         wallet: "$40,243.70",

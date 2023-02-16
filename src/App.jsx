@@ -2,12 +2,12 @@ import React from 'react'
 import { LeftSide, Main, RightSide, NavBar } from "./components";
 
 const App = () => (
-  <div className='test'>
-    <div>
+  <div>
+    <div className='section'>
       {/* <NavBar /> */}
       <LeftSide />
       <Main />
-      <RightSide />
+      {/* <RightSide /> */}
     </div>
   </div>
 )
