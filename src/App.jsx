@@ -1,13 +1,13 @@
-import React from 'react'
-import { LeftSide, Main, RightSide, NavBar } from "./components";
+import React from 'react';
+import { LeftSide, MidSide, RightSide, NavBar } from "./components";
 
 const App = () => (
   <div>
     <div className='section'>
       {/* <NavBar /> */}
       <LeftSide />
-      <Main />
-      {/* <RightSide /> */}
+      <MidSide />
+      <RightSide />
     </div>
   </div>
 )

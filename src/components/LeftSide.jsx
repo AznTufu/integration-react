@@ -1,6 +1,6 @@
-// import { useState } from 'react'
-import { dashboard } from '../constants'
-import { logo, dashboardimg, logout } from '../assets/'
+import React from 'react';
+import { dashboard } from '../constants';
+import { logo, dashboardimg, logout } from '../assets/';
 
 const LeftSide = () => {
   return (
@@ -19,6 +19,7 @@ const LeftSide = () => {
           </li>
         ))}
       </section>
+      
       <section className='logout'>
         <img src={logout} alt="logout logo"/>
         <p>Log Out</p>

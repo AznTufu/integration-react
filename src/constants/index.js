@@ -9,11 +9,15 @@ import {
     bnb,
     litecoin,
     bitcoin,
-    etherum,
+    ethereum,
     bitcoin2,
     curve1,
     curve2,
     bitcoin3,
+    calendar,
+    downarrow,
+    bitcoin4,
+    ethereum2,
 } from "../assets";
 
 export const balances = [{
@@ -70,9 +74,9 @@ export const transactions = [{
         id: "usdt",
         icon: usdt,
         title: "Usdt",
-        stat: "+ 3.546",
+        stat: "+$3.546",
         date: "Today, 1:45 pm",
-        content: "Recieved",
+        content: "Received",
     },
     {
         id: "bnb",
@@ -96,15 +100,15 @@ export const transactions = [{
         title: "Bitcoin",
         stat: "+ 2.7546",
         date: "Today, 7:55 am",
-        content: "Recieved",
+        content: "Received",
     },
     {
-        id: "etherum-1",
-        icon: etherum,
-        title: "Etherum",
+        id: "ethereum-1",
+        icon: ethereum,
+        title: "Ethereum",
         stat: "+ 1.646",
         date: "Today, 5:45 am",
-        content: "Recieved",
+        content: "Received",
     },
 ];
 
@@ -116,9 +120,9 @@ export const assets = [{
         content: "BTC",
     },
     {
-        id: "etherum",
-        icon: etherum,
-        title: "Etherum",
+        id: "ethereum",
+        icon: ethereum,
+        title: "Ethereum",
         wallet: "143,850.45",
         content: "ETH",
     },
@@ -137,9 +141,9 @@ export const stats = [{
         trade: "Trade"
     },
     {
-        id: "etherum",
-        icon: etherum,
-        title: "Etherum",
+        id: "ethereum",
+        icon: ethereum,
+        title: "Ethereum",
         name: "Market Cap",
         wallet: "$40,243.70",
         content: "ETH",
@@ -147,5 +151,119 @@ export const stats = [{
         coefficient: "+ 1.56",
         img: curve2,
         trade: "Trade"
+    },
+];
+
+export const dates = [{
+        id: "1Hour",
+        title: "1H",
+    },
+    {
+        id: "1Day",
+        title: "1D",
+    },
+    {
+        id: "3Day",
+        title: "3D",
+    },
+    {
+        id: "1Week",
+        title: "1W",
+    },
+    {
+        id: "1Month",
+        title: "1M",
+    },
+    {
+        id: "1Calendar",
+        title: calendar,
+    },
+];
+export const menus = [{
+        id: "Bitcoin",
+        img: bitcoin4,
+        title: "BTC",
+        icon: downarrow,
+    },
+    {
+        id: "Ethereum",
+        img: ethereum2,
+        title: "ETH",
+        icon: downarrow,
+    },
+];
+export const gains = [{
+        id: "$700",
+        title: "$700",
+    },
+    {
+        id: "$600",
+        title: "$600",
+    },
+    {
+        id: "$500",
+        title: "$500",
+    },
+    {
+        id: "$400",
+        title: "$400",
+    },
+    {
+        id: "$300",
+        title: "$300",
+    },
+    {
+        id: "$200",
+        title: "$200",
+    },
+    {
+        id: "$100",
+        title: "$100",
+    },
+];
+
+export const days = [{
+        id: "5Nov",
+        title: "5 Nov",
+    },
+    {
+        id: "6Nov",
+        title: "6 Nov",
+    },
+    {
+        id: "7Nov",
+        title: "7 Nov",
+    },
+    {
+        id: "8 Nov",
+        title: "8 Nov",
+    },
+    {
+        id: "9Nov",
+        title: "9 Nov",
+    },
+    {
+        id: "5Nov",
+        title: "10 Nov",
+    },
+    {
+        id: "5Nov",
+        title: "11 Nov",
+    },
+    {
+        id: "5Nov",
+        title: "12 Nov",
+    },
+    {
+        id: "5Nov",
+        title: "13 Nov",
+    },
+    {
+        id: "5Nov",
+        title: "14 Nov",
+    },
+    {
+        id: "5Nov",
+        title: "15 Nov",
     },
 ];

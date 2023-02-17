@@ -1,6 +1,6 @@
 import bitcoin from "./bitcoin.svg";
 import bitcoin2 from "./bitcoin2.svg";
-import etherum from "./etherum.svg";
+import ethereum from "./ethereum.svg";
 import litecoin from "./litecoin.svg";
 import usdt from "./usdt.svg";
 import bnb from "./bnb.svg";
@@ -24,11 +24,13 @@ import profile from "./profile.svg";
 import search from "./search.svg";
 import dashboardimgwhite from "./dashboardimgwhite.svg";
 import bitcoin3 from "./bitcoin3.svg";
+import bitcoin4 from "./bitcoin4.svg";
+import ethereum2 from "./ethereum2.svg";
 
 export {
     bitcoin,
     bitcoin2,
-    etherum,
+    ethereum,
     litecoin,
     usdt,
     bnb,
@@ -52,4 +54,6 @@ export {
     search,
     dashboardimgwhite,
     bitcoin3,
+    bitcoin4,
+    ethereum2,
 }
