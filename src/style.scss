@@ -27,10 +27,15 @@
     font-weight: $font-weight;
     font-size: $font-size;
 }
-
+$mobile: 740;
 $tablet: 768;
 $large: 1024;
-$desktop: 1280;
+$desktop: 2080;
+@mixin mobile {
+    @media only screen and (max-width: ($mobile * 1px)) {
+        @content;
+    }
+}
 @mixin tablet {
     @media only screen and (min-width: ($tablet * 1px)) {
         @content;
@@ -38,13 +43,13 @@ $desktop: 1280;
 }
 
 @mixin large {
-    @media only screen and (min-width: ($large * 1px)) {
+    @media only screen and (max-width: ($large * 1px)) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media only screen and (min-width: ($desktop * 1px)) {
+    @media only screen and (max-width: ($desktop * 1px)) {
         @content;
     }
 }
@@ -70,10 +75,18 @@ $desktop: 1280;
 
 body {
     background-color: #000000;
+    overflow: hidden;
+    // background-color: rgb(138, 141, 139);
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .left-section {
-    margin-left: 90px;
+    margin-left: 5px;
     margin-top: 48px;
     margin-bottom: 27px;
     display: flex;
@@ -131,11 +144,8 @@ body {
     }
 }
 
-.section {
-    display: flex;
-}
-
 .main-section {
+
     margin-top: 48px;
     margin-right: 35px;
     .header {
@@ -220,6 +230,102 @@ body {
             }
         }
     }
+    .container {
+        @include box( 954px, 558px);
+        background: rgba(48, 53, 65, 0.67);
+        border-radius: 30px;
+        display: flex; 
+        justify-content: flex-start;
+        margin: 5px 0px;
+        .graph {
+            margin: 28px 40px ;
+            display: flex;
+            flex-direction: column;
+            .navlink {
+                display: flex;
+                .date {
+                    @include flexStart();
+                    gap: 10px;
+                    margin-bottom: 18px;
+                    margin-right: 210px;
+                    .box {
+                        @include box(42px, 42px);
+                        @include flexCenter();
+                        background: #000000;
+                        border-radius: 5px;
+                        p {
+                            @include font-face(Poppins, normal, 500, 27px);
+                            color: #FFFFFF;
+                        }
+                    }
+                    .boxWhite {
+                        @include box(42px, 42px);
+                        @include flexCenter();
+                        background: rgba(255, 255, 255, 0.8);
+                        border-radius: 5px;
+                        p {
+                            @include font-face(Poppins, normal, 500, 27px);
+                            color: #000000;
+                        }
+                    }
+                }
+                .menu {
+                    display: flex;
+                    .box {
+                        display: flex;
+                        margin-right: 16px;
+                        .content {
+                            @include flexCenter();
+                            @include box(152px, 37px);
+                            background: #000000;
+                            gap: 16px;
+                            margin-right: 16px;
+                            p {
+                             @include font-face(Poppins, normal, 600, 27px);
+                             color: #FFFFFF;
+                             opacity: 0.7;
+                            }
+                         }
+                    }
+                   
+                }
+            }
+            .courbe {
+                display: flex;
+                .graph {
+                    display: flex;
+                    align-items: end;
+                    width: 800px;
+                    height: 320px;
+                    margin-left: 60px;
+                }
+            }
+            .gain {
+                display: flex;
+                flex-direction: column;
+                .box {
+                    margin-bottom: 32px;
+                    p {
+                        @include font-face(poppins, normal, 600, 17px);
+                        color: rgba(255, 255, 255, 0.7);
+                    }
+                }
+            }
+            .day {
+                display: flex;
+                flex-direction: row;
+                gap: 19px;
+                margin-left: 50px;
+                .box {
+                    p {
+                        @include font-face(poppins, normal, 600, 17px);
+                        color: rgba(255, 255, 255, 0.7);
+                    }
+                }
+            }
+        }
+    }
+
     .recentTransactions {
         display: flex;
         flex-direction: column;

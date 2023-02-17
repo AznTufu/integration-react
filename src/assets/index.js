@@ -7,8 +7,7 @@ import bnb from "./bnb.svg";
 import logo from "./logo.svg";
 import calendar from "./calendar.svg";
 import downarrow from "./downarrow.svg";
-import leftarrow from "./leftarrow.svg";
-import rightarrow from "./rightarrow.svg";
+import arrow from "./arrow.svg";
 import help from "./help.svg";
 import dashboardimg from "./dashboardimg.svg";
 import settings from "./settings.svg";
@@ -26,6 +25,7 @@ import dashboardimgwhite from "./dashboardimgwhite.svg";
 import bitcoin3 from "./bitcoin3.svg";
 import bitcoin4 from "./bitcoin4.svg";
 import ethereum2 from "./ethereum2.svg";
+import graph from "./graph.svg";
 
 export {
     bitcoin,
@@ -37,8 +37,7 @@ export {
     logo,
     calendar,
     downarrow,
-    leftarrow,
-    rightarrow,
+    arrow,
     help,
     dashboardimg,
     settings,
@@ -56,4 +55,5 @@ export {
     bitcoin3,
     bitcoin4,
     ethereum2,
+    graph,
 }
