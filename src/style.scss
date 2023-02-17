@@ -29,15 +29,15 @@
 }
 $mobile: 740;
 $tablet: 768;
-$large: 1024;
-$desktop: 2080;
+$large: 1224;
+$desktop: 1680;
 @mixin mobile {
     @media only screen and (max-width: ($mobile * 1px)) {
         @content;
     }
 }
 @mixin tablet {
-    @media only screen and (min-width: ($tablet * 1px)) {
+    @media only screen and (max-width: ($tablet * 1px)) {
         @content;
     }
 }
@@ -75,23 +75,34 @@ $desktop: 2080;
 
 body {
     background-color: #000000;
-    overflow: hidden;
     // background-color: rgb(138, 141, 139);
 }
 
 .section {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
+    @include large() {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+    }
 }
 
 .left-section {
-    margin-left: 5px;
+    margin-left: 90px;
     margin-top: 48px;
     margin-bottom: 27px;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    display: block;
+    width: 20%;
+    @include desktop() {
+        display: none;
+    }
     .logo {
         @include box(190px, 48px);
     }
@@ -145,30 +156,63 @@ body {
 }
 
 .main-section {
-
-    margin-top: 48px;
+    width: 60%;
     margin-right: 35px;
+    margin-top: 48px;
+    @include large() {
+        width: 80%;
+    }
     .header {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         margin-top: 5px;
         margin-bottom: 54px;
-        gap: 236px;
         margin-right: 35px;
+        gap: 236px;
+        @include desktop() {
+            gap: 0;
+            justify-content: space-between;
+        }
+        @include large() {
+            gap: 0;
+            justify-content: space-between;
+        }
+        @include mobile( ) {
+            gap: 150px;
+        }
         h1 {
             @include font-face(Poppins, normal, 500, 35px);
             color: #FFFFFF;
+            @include desktop() {
+               font-size: 20px
+            }
+        }
+        .profile {
+            display: none;
+            @include large() {
+                display: flex
+             }
+            @include mobile() {
+            display: flex
+            }
+        }
+        .search {
+            @include flexStart();
+            @include box( 476px, 50px);
+            background-color: #FFFFFF;
+            padding: 10px 73px 10px 23px;
+            border-radius: 15px;
+            gap: 15px;
+            @include large() {
+                @include box( 306px, 50px);
+             }
+             @include mobile() {
+                @include box( 306px, 50px);
+             }
         }
     }
-    .search {
-        @include flexStart();
-        @include box( 476px, 50px);
-        background-color: #FFFFFF;
-        padding: 10px 73px 10px 23px;
-        border-radius: 15px;
-        gap: 15px;
-    }
+
     .navbar {
         display: flex;
         flex-direction: row;
@@ -237,10 +281,16 @@ body {
         display: flex; 
         justify-content: flex-start;
         margin: 5px 0px;
+        @include desktop() {
+            @include box( 750px, 378px);
+        }
         .graph {
             margin: 28px 40px ;
             display: flex;
             flex-direction: column;
+            @include desktop() {
+                margin: 15px 20px;
+            }
             .navlink {
                 display: flex;
                 .date {
@@ -253,9 +303,20 @@ body {
                         @include flexCenter();
                         background: #000000;
                         border-radius: 5px;
+                        @include desktop() {
+                            @include box(20px, 20px)
+                        }
                         p {
                             @include font-face(Poppins, normal, 500, 27px);
                             color: #FFFFFF;
+                            @include desktop() {
+                                font-size: 15px;
+                            }
+                        }
+                        img {
+                            @include desktop() {
+                                @include box(20px, 20px)
+                            }
                         }
                     }
                     .boxWhite {
@@ -263,9 +324,15 @@ body {
                         @include flexCenter();
                         background: rgba(255, 255, 255, 0.8);
                         border-radius: 5px;
+                        @include desktop() {
+                            @include box(20px, 20px)
+                        }
                         p {
                             @include font-face(Poppins, normal, 500, 27px);
                             color: #000000;
+                            @include desktop() {
+                                font-size: 15px;
+                            }
                         }
                     }
                 }
@@ -280,10 +347,17 @@ body {
                             background: #000000;
                             gap: 16px;
                             margin-right: 16px;
+                            @include desktop() {
+                                @include box(132px, 25px);
+                                margin-right: 10px
+                            }
                             p {
                              @include font-face(Poppins, normal, 600, 27px);
                              color: #FFFFFF;
                              opacity: 0.7;
+                             @include desktop() {
+                                font-size: 15px;
+                            }
                             }
                          }
                     }
@@ -293,11 +367,14 @@ body {
             .courbe {
                 display: flex;
                 .graph {
-                    display: flex;
-                    align-items: end;
-                    width: 800px;
-                    height: 320px;
-                    margin-left: 60px;
+                    img {
+                        display: flex;
+                        align-items: end;
+                        width: 800px;
+                        @include desktop() {
+                            width: 600px;
+                        }
+                    }
                 }
             }
             .gain {
@@ -305,9 +382,15 @@ body {
                 flex-direction: column;
                 .box {
                     margin-bottom: 32px;
+                    @include desktop() {
+                        margin-bottom: 19px;
+                    }
                     p {
                         @include font-face(poppins, normal, 600, 17px);
                         color: rgba(255, 255, 255, 0.7);
+                        @include desktop() {
+                            font-size: 15px;
+                        }
                     }
                 }
             }
@@ -316,10 +399,16 @@ body {
                 flex-direction: row;
                 gap: 19px;
                 margin-left: 50px;
+                @include desktop() {
+                    gap: 12px;
+                }
                 .box {
                     p {
                         @include font-face(poppins, normal, 600, 17px);
                         color: rgba(255, 255, 255, 0.7);
+                        @include desktop() {
+                            font-size: 15px;
+                        }
                     }
                 }
             }
@@ -337,11 +426,18 @@ body {
             color: #FFFFFF;
             h2 {
                 padding-right: 540px;
-                @include font-face(poppins, normal, 700, 22px)
+                @include font-face(poppins, normal, 700, 22px);
+                @include desktop() {
+                    font-size: 15px;
+                    padding-right: 450px;
+                }
             }
             p {
                 color: rgba(255, 255, 255, 0.7);
-                @include font-face(poppins, normal, 700, 22px)
+                @include font-face(poppins, normal, 700, 22px);
+                @include desktop() {
+                    font-size: 15px;
+                }
             }
         }
         .box {
@@ -354,16 +450,27 @@ body {
             margin-bottom: 20px;
             color: #FFFFFF;
             opacity: 0.95;
+            @include desktop() {
+                @include box(760px, 79px);
+             }
             img {
                 @include box( 47.82px, 47.88px);
                 margin-left: 50px;
                 margin-right: 39px;
+                @include desktop() {
+                    @include box( 35px, 35px);
+                    margin-left: 30px;
+                    margin-right: 20px;
+                }
             }
             .name {
                 display: flex;
                 flex-direction: column;
                 padding: 23px 0;
                 @include box(100px, 79px);
+                @include desktop() {
+                    @include box(60px, 79px);
+                 }
                 .title {
                     margin-bottom: 3px;
                 }
@@ -414,16 +521,35 @@ body {
 
 .right-section {
     margin-top: 45px;
+    width: 20%;
+    margin-right: 90px;
+    @include large() {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80%;
+    }
+    @include mobile() {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 40%;
+    }
     .navbar {
         display: flex;
         align-items: center;
         margin-bottom: 88px;
+        display: flex;
+        justify-content: space-between;
         .notification {
-            padding-right: 304px;
             @include box(37px, 41.03px);
+            
         }
         img {
             @include box( 54px, 54px);
+        }
+        @include large() {
+            display: none;
         }
     }
     .recent {
@@ -431,6 +557,9 @@ body {
             @include font-face(poppins, normal, 700, 22px);
             color: #FFFFFF;
             margin-bottom: 41px;
+            @include desktop() {
+                font-size: 20px
+            }
         }
         .recentTransaction {
             @include flexStart();
@@ -470,12 +599,18 @@ body {
             @include font-face(poppins, normal, 700, 24px);
             color: #FFFFFF;
             margin-bottom: 15px;
+            @include desktop() {
+                font-size: 20px
+            }
         }
         .box {
             @include box( 360px, 174px);
             background: linear-gradient(98.73deg, #611D8D 35.75%, #2F7EC1 73.26%);
             border-radius: 30px;
             margin-bottom: 28px;
+            @include desktop() {
+                box-sizing: calc(360px - 80%);
+            }
             .asset-card {
                 padding: 15px 0 12px 30px;
                 img {
@@ -524,4 +659,4 @@ body {
             }
         }
     }
-}
+}   

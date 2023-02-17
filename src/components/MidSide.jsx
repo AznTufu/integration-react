@@ -1,5 +1,5 @@
 import React from 'react';
-import { search } from '../assets';
+import { search, profile } from '../assets';
 import { TotalBalance, Graph, CoinTransaction} from './';
 const MidSide = () => {
   return (
@@ -10,6 +10,10 @@ const MidSide = () => {
           <img src={search} alt="search logo" />
           <input type="text" placeholder='Search' />
         </div>
+        <div className='profile'>
+        <img src={profile} alt="profile logo"/>
+        </div>
+
       </section>
       
       <TotalBalance />
