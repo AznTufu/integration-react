@@ -22,7 +22,6 @@ import notification from "./notification.svg";
 import profile from "./profile.svg";
 import search from "./search.svg";
 import dashboardimgwhite from "./dashboardimgwhite.svg";
-import bitcoin3 from "./bitcoin3.svg";
 import bitcoin4 from "./bitcoin4.svg";
 import ethereum2 from "./ethereum2.svg";
 import graph from "./graph.svg";
@@ -52,7 +51,6 @@ export {
     profile,
     search,
     dashboardimgwhite,
-    bitcoin3,
     bitcoin4,
     ethereum2,
     graph,
